@@ -12,8 +12,8 @@ pour les fois suivantes, on fait un pull (distant vers local)
 du repository local vers repository distant :push
 
 pour mettre git :sudo apt install git
-pour se configurer: git config -- global unser.email "carole.ciemny.devweb@gmail.com"
-git config -- gloabl user.name "ciemny"
+pour se configurer: git config -- global user.email "carole.ciemny.devweb@gmail.com"
+git config -- global user.name "ciemny"
 
 pour mettre du repository local à distant:
 git remote add origin https://github.com/caroleciem/journal.git
