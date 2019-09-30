@@ -1,0 +1,18 @@
+creer un repository : git init
+création d'un fichier: touch journal.txt
+choix des fichiers à historiser : git add <nom-du-fichier> par exemple git add journal.txt
+git status: voir comment sont les fichiers
+git commit -m "mon journal du 30/09" (permet de mettre dansle repository du bureau
+
+pour mettre dans le repository distant  (pour sauvegarder et partager): git remote add origin < url-du-projet-distant>
+
+pour récupérer ce qu'il y a sur le repository pour la 1ere fois : clone : git clone https://....(ce que l'on récupère sur github)
+pour les fois suivantes, on fait un pull (distant vers local)
+
+du repository local vers repository distant :push
+
+pour mettre git :sudo apt install git
+pour se configurer: git config -- global unser.email "carole.ciemny.devweb@gmail.com"
+git config -- gloabl user.name "ciemny" 
+
+
