@@ -16,7 +16,7 @@ pour se configurer: git config -- global user.email "carole.ciemny.devweb@gmail.
 git config -- global user.name "ciemny"
 
 pour mettre du repository local à distant:
-git remote add origin https://github.com/caroleciem/journal.git
+git remote add origin https://github.com/caroleciem/journal.git (pour la 1ere fois)
 git push -u origin master
 
  
