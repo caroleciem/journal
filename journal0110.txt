@@ -1,0 +1,127 @@
+"nano journal.txt" ouvre la console editeur du fichier journal.txt
+"clear" nettoyage de la console
+"git add ." permet de faire le add detout le contenu du répertoire courant
+"git add jour*" permet de faire le add de tous les fichiers commençant par jour
+"git log" permet de voir la log
+"git commit --amend -m "xxxx"" permet de changer le commentaire
+lorsque l'on a fait un add par exemple de journal.txt que l'on veut supprimer avant de commiter "git reset HEAD journal.txt"
+lorsque l'on a fait un git init, le .git est créé, il n'est plus nécessaire de refaire de git init, on peut refaire des adds et commits
+
+GITHUB:
+lorsque l'on a créé le repository distant, il faut ajouter les collaborateurs en allant sur setting puis faire des ADD des collaborateurs
+
+Gestion des conflits:
+on récupère le fichier via un clone
+git clone https://......
+
+ensuite, on modifie son fichier avec nano par exemple
+on fait le git add journal.txt
+puis le git commit -m "commentaires"
+
+à ce moment-là, nous sommes toujours en local 
+pour mettre sur le repository distant:
+git push s'il y un conflit, il nous sera demander de faire un git pull
+soit il y fusion automatiquement et là, on pourra refairele add puis le commit puis le push, soit il faudra modifier avec nano du fichieravant de faire le add, commit et push.
+
+LINUX: terminologie
+particularité de Linux est d'être un noyau (la suite de programme permettant d'intéragir avec les composants d'un terminal). Il est souvent confondu avec un système d'exploitation complet 
+Linux est Open source
+
+Bash:interpréteur en ligne de commande
+
+exercices:
+
+ETAPE1
+ouvrir la commande : CTRL ALT T
+
+tester pwd
+
+afficher le contenu du dossier : ls
+
+creer un dossier linux : mkdir linux
+
+créez un fichier notes.txt : touch notes.txt
+
+afficher le contenu du fichier notes.txt: cat notes.txt
+on peut aussi utiliser more notes.txt (pagination) ou less (pagination permettant de remonter)
+head notes.txt:affiche les premières lignes
+man head (manuel)
+head -n 15 notes.txt (affiche les 15 premières)
+
+utiliser un éditeur pour écrire dans fichier: nano notes.txt
+sauvegarder:dans nano CTRL O
+faites un fichier sauvegardes : mkdir sauvegardes
+copier fichier notes.txt dans dossier sauvegardes et renommer le en notes.sauvegardes:
+se remettre dans le répertoires au dessus de linux puis
+cp linux/notes.txt sauvegardes/
+mv notes.txt notes-sauvegardes.txt
+
+afficher contenu fichier sauvegardes
+cd sauvegardes
+ls
+
+
+ETAPE2
+
+trouver adresse ip de la machine:
+ifconfig
+
+trouver le numéro de processus du terminal bash que l'on ouvert:
+ps et on regarde le bash
+
+ouvrer un logiciel en utilisant le bureau ( par ex libre office) puis le tuer:
+top (on voit ce qui tourne) on prend le PID
+ps -ef on a tous les processus
+ps -ef |grep Discord (ne ressort que ceux qui ont Discord)
+kill -3 14026 
+pour fermer brutalement
+kill -9 45211
+
+pour sortir du man par ex  on fait Q ou CTRL C
+
+donner le temps moyen qu'un paquet informatique passe entre terminal et site franceTV:
+ping www.francetv.fr
+on peut mettre aussi ping francetv
+
+donner le nbre de routeurs qu'il y a entre nous et les serveurs:
+TRACEROUTE adresse IP (que l'on aura récupérée avec le ping)
+traceroute francetv
+
+écrire le script bash: 
+on créé le script.sh
+à l'intérieur:
+ #!/bin/bash
+# syntaxe : script.sh
+echo "Bonjour cher $1"
+
+ensuite il donner les droits
+chmod +x script.sh
+
+puis exécute le script avec carole comme paramètre:
+./script.sh carole
+cela affiche :
+Bonjour cher carole
+
+CRON :
+syntaxe:
+m h dom mon dow user cmd
+m:minutes
+h:heure
+dom:jour
+mon:mois
+dow:jour de la semaine
+user:utilisateur
+cmd: commande
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+   

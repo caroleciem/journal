@@ -1,0 +1,89 @@
+Visual Studio code:installation
+chmod +X permet a tt le monde de l'executer
+qd on fait ls -l on voit 
+_rw_r__r__
+le premier caractère peut être à d (si d,c'est undirectory, sinon c'est un fichier)
+les trois suivants pour nous, les trois suivants pour le groupe et les trois derniers pour tout le monde
+chmod 777 donnent tous les droits à tout le monde
+chmod 744 droit exécuter pour nous mais seulement lire et écrire pour le groupe et pour tout le monde
+
+autre version de l'exercice 
+#!/bin/bash
+echo comment tu t\'appelles?
+read prenom
+echo salut $prenom
+
+cron commandes planifiées
+on fait crontab -e et cela affiche ce qu'il y a, on peut ensuite ajouter une ligne du type:
+*/5 * * * * touch /users/jules/linux/`date+'$d-$m-y $Hh$M'`.log
+
+ouverture: openfolders
+création du .md (format market down)
+création du .py (format python)
+pour sauvegarder CTRL S 
+pour ouvrir la console, on va dans terminal puis new terminal
+Python:
+langage interprété, il faut un interpréteur
+très utilisé pour le scripting et l'analyse de données
+commentaire #
+raccourci commentaire CTRL MAJ :
+pour les variables, pas besoin de préciser le type
+age = 20
+formateur =True
+prenom = "carole"
+nom = 'ciemny'
+taille = 144.5
+
+on met _ entre chaque mot, par ex: on peut avoir plusieurs lignes:
+description = "je m'appelle Jules/n j'ai 30 ans"
+
+passera à la ligne jusqu'à ce que l'on aitde nouveau """
+passions = """ -aviron
+-self-hacking
+-danse"""
+
+pour executer (attention sauvegarder avant)
+python3 test.py
+
+
+les opérateurs
++ - *
+le / donnera toujours un flottant même si c'est deux entiers
+
+puissance a = 3**2 (3 puissance 2)
+division entière //
+modulo %
+ 
+operateur de chaines
+intro="bonjour, je m'appelle " + nom + " et j'ai " + str(age) + " ans"
+
+conditions:
+attention à l'identation et ne pas oublier les :
+temp = 10
+vet = "rien"
+if temp < 15 :
+    vet= "pull"
+else :
+    vet ="tee-shirt"
+
+elif
+dès que cela est vérifié, on ne fait pas le reste
+age = 2
+if age < 0:
+    message ="entrer age valide"
+elif age <3:
+    message= "tarif gratuit"
+else :
+    message ="tarif normal"            
+
+
+fonctions :bout de code que l'on va réutiliser, rend le code modulaire va pouvoir être fait avec différents arguments
+def dire_bonjour(prenom):
+    return "bonjour"+prenom
+
+message = dire_bonjour(jules)
+
+string interpolation
+print(f'aire du triangle : {calcul_aire(3,4)}') 
+debuger, on met le point rouge puis on clique sur insecte
+quand on clique sur step in, il va dans la fonction
