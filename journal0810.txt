@@ -1,0 +1,81 @@
+tableau de tableau
+int [] [] data = {{1,0},{2,-1,3},{3,3,36};
+pour avoir le 36, c'est data[2][2]
+pour avoir le 3 de la deuxième accolade, c'est data[1][2]
+
+typage est statique, le typage est fait avant l'execution contrairement au 
+dynamique qui se fait en cours d'exécution
+attention quand on écrit:
+float[] tab1 = new float[5]; c'est la référence d'untableau de float
+float [] tab2 = tab1 : tab2 aura la même référence que tab1 quand ensuite 
+on modiera une valeur de tab1, cela modifira tab2.
+les classes(comme String) et les tableaux sont manipulés par référence et pas directement
+pour les primitif, c'est bien la valeur qui ets transmise (et non la variable)
+
+manipulation de primitifs : valeurs
+manipulation de tableau : référence
+
+pour les String, c'est différents car ils sont immuables. Par ex quand on fait:
+s2.toUpperCase();oncré une nouvelle chaine de caractèreen majuscule sur une nouvelle référence
+
+attention l'ordre indique si on convertit ou non: par ex "mon score est" +2+3
+ on aura score 23 alors que 2+3 "points", cela fera 5 points
+
+les contrôles sont entre {}
+
+operateur de comparaison :
+&& : et, ilfaut les deuxtrue pour être true
+|| : ou si l'un des deux est true, c'est true
+^:exclusif est vrai si seulement un des deuxest true
+
+operateur ternaire
+expression booleenne?expression vrai:expression fausse 
+int nbre4 = (2<3)? 10:5;  (nbre4 sera égal à 10 car l'expression est vraie)
+
+switch:
+switch (op){
+	case '+':{
+           res = i+j;
+	   break; (si on ne met pas le break, il continue)
+	}
+	case '-':{
+	   res = i-j;
+	   break;
+	default:{
+	  System.err.println'"opération");
+	};
+
+boucles
+ 
+While (exp){
+code
+};
+
+do{ code
+} while (exp);
+
+for (init; test de continuation; mise à jour iter){
+instruction à repet
+}
+
+boucle pour tableau
+for (typeElement element :collectionElement){
+instruction
+}					
+par ex
+int[]data = {1,2,5};
+for (int v: data){
+  System.out.println(v);
+}   
+
+fonctions:
+
+public static double cmToInches(double inCm){
+   double inInches = inCm * 0.394
+   return inInches;
+}
+on peut avoir un argument, pas d'argument ou plusieurs arguments
+
+fonctions récursives, rappelle mais en conservant et en créant un nouveau
+contexte local	
+surcharge, même nom mais avec argument différent car elles font la même chose

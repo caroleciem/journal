@@ -1,0 +1,78 @@
+correction projet python.
+donnée numérique: .isdigit
+
+Attention, quand un projet, il faut mettre les fichiers dans le répertoire du
+projet dans un répertoire ressources par ex:
+projet 1:
+	step1.py
+	step2.py
+	ressources
+		poids-f-csv
+
+plt.subplot(1,3,1) le premier est la ligne, le deuxième 3 colonnes, le 3eme 
+on fait le 1er
+
+plt.grid(True) :on affiche une grille
+
+JAVA:
+java pgm compilé
+commentaires :
+/*xxxxx*/
+
+la classe doit avoir le nom du fichier, par ex Exercices1.java
+
+public class Exercices1{
+   public static void main(String[] args){
+	 System.out.println("HelloWorld");
+
+   }
+}
+pour une classe on doit mettre une majuscule
+
+le fichier Exercices1.java est compilé, cela donne un fichier 
+en bytecode Exercices.class etc'estlavirtual machine qui va exécuter le pgm
+
+différence entre traitement de texte et éditeur:letraitement de texte gère 
+des polices, fonts...alorsque l'éditeur a du texte brut
+
+pour lancer le pgm, on fait java Exercices1
+java est un langage en typage statique
+
+pour compiler dans la console on fait javac ./src/ExamplesArgs.java
+
+pour mettre un argument dans INTELLIJ, on va dans RUN puis EDIT CONFIGURATIONS 
+et on renseigne l'argument dans program argument
+quand c'est dans la console, il fallait mettre java ExampleArgsRenamed Carole
+
+pour changer le nom de la classe, on se met sur l'onglet, on clique droit
+et rename file
+
+Convention: on utilise le CamelCase, il n'y a que les classes qui commencent
+par une majuscule. L'identation est imposée par convention.
+Pour bien remettre l'identation, on va dans CODE puis REFORMAT CODE (CTRL ALT L)
+
+typage des variables:
+il faut un type pour les variables. Il faut lesdéclarer et les initialiser.
+il faut faire attention à la portée par ex quand fait dans un if...
+
+différence avec python:avec python, on pouvait utiliser "" ou ' 'pour une chaine 
+de caractères, vide ou un seul. Pour java,"" ne seraque pour une chaine de 
+caractères, ' ' que pour un caractère
+
+type de données primitifs: numérique(entier, virgul)e, booléen et caractère
+type de données gérées par référence: tableaux
+int[]arrayOfInts;
+long[]arrayOfLongs; 
+on a pas de taille dans la déclaration
+double[]arrayOfDouble={0.5,5.0,0.75};
+arrayOfDoubles={0.3,3.4} le deuxième n'écrase pas le 1er tableau, il change
+la référence
+pour initialiser on peut faire arrayOfDoubles = new double[3]; 
+cela fera un tableau de 3 colonnes initialisées à 0.0
+le new indique créé moi quelque chose en mémoire
+
+double [] arrayOfdoubles = new double [] {1,5,6};
+
+taille d'un tableau: nom.length 
+
+ 
