@@ -1,0 +1,26 @@
+collections: mini framework appelé collection
+ce sont des classes génériques que l'on ne fait pas avec des types primitifs
+ArrayList <String> mylist = new ArrayList<>();
+si on veut faire avec des entiers:
+ArrayList <Integre> myList = new ArrayList <>();
+on n'a pas besoin de déclarer son tableau en entier.
+myList.add(1);
+myList.add(2);
+
+HashMap équivalent du dictionnaire en python avec uneclé et une valeur
+ArrayList est l'équivalent deslistes en python.
+Set pour s'affranchir des doublons
+indexOf() : pour savoir à quelle position est une donnée,
+retourne la première  trouvée
+
+myList.contains(3) retourne true si c'est le cas
+
+HashMap<String, Integer> words = new HashMap <>();
+words.put("Etghique",1) : on initialise
+words.put("dieu",620");
+words.get("Ethique") on récupère la valeur
+Integer oldEthics = words.put("Ethique",1): on récupère la valeur avant la mise
+ à jour, si c'est la premier, on récupère null
+
+
+

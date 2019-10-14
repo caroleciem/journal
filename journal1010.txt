@@ -1,0 +1,91 @@
+surcharge de fonctions : on peut avoir le meme nom de fonction avec des 
+arguments différents
+les fonctions font la même chose mais avec des arguments différents
+
+math.nextUp: valeur adjacente qui peut être représentée en float
+Float.VALUE_MAX, c'est une constante
+
+les float et double n'ont pas de précision exacte, la solution ets d'essayer de ne pas avoir de décimales
+par exemple mettre des centimes au lieu d'euros ou cm au lien de metres
+
+JAVA IO:
+
+System.err sortie en erreur que l'on peut diriger vers un fichier
+méthodes: : ce sont des fonctions appelées sur des objets: objet.methode
+
+System.out.println(): l'objet out défini dans System appelle la méthode println
+
+un objet est défini par la classe dont il est une instance 
+String.length() length serala methode appelée sur un obje de la classe string.
+
+qd out, methode println définie dans Printstream(Classe)
+
+classe Scanner, il y a la méthode nextInt. System.in est l'entree standard et 
+la methode met au format int
+
+il fautcréer une instance(objet) en passant enargument du constructeur
+et ensuite, on peut utiliser la méthode
+
+import de java.util.scanner car Scanner est défini dans le package java.util
+java.lang ets déjà mis par défaut (pour String, Math...)
+
+nexInt: prochain entier dans le flux. Cela attend qu'il y ait entrée
+
+Scanner sc : sc réfrence sur instancede la classe Scanner
+
+sc.nextDouble(): attention suivant la config on peut attendre 2.5 ou 2,5
+sc.nextLine():unechaine de caractère
+qd il y a eu une saisie avant (par ex nextInt), il faut faire sc.nextLine()
+pour consommer par ex le retour à la ligne et ensuite, on peut faire :
+String Line = sc.nextLine(); 
+
+Exception:
+pour un fichier, on est obligé de prévoir les exceptions:
+soit on propage avec throws Exception
+soit on gère localement avec try/catch et éventuellement finally
+
+lecture fichier:
+
+Scanner sc = nex Scanner(new File("inputFile.txt")); 
+for (int i = 0; sc.hasNextLine(); ++i){
+	System.out.println("[" + i + "]"+sc.nextLine());
+}
+sc.close();
+le newFile crée une instance de la classe File et ouvre le fichier
+pour lire, on peut aussi mettre un argument:
+Scanner sc = new Scanner(new File(args[0]); et on met en argument le nom 
+du fichier
+
+Pour écrire un fichier:
+
+PrintStream fileOut = new PrintStream(new FileOutputStream ("textFile.txt"))
+
+
+quand on a une exception, le reste ne s'éxécute pas, et donc on ne ferme pas le fichier
+le finally est exécuté meme si exception
+ex:
+ try {
+            sc = new Scanner(new File("inputFile.txt"));
+            for (int i = 0; sc.hasNextLine(); ++i) {
+                System.out.println("[" + i + "]:" + sc.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        finally {
+           if (sc!= null) {
+               sc.close();
+           }
+
+avec java, on peut utiliser le try-with-resources
+ try  (Scanner sc = new Scanner (new File("inputFile1.txt"))){
+            for (int i = 0; sc.hasNextLine(); ++i) {
+                System.out.println("[" + i + "]:" + sc.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+           System.out.println ("fichier inexistant");
+            e.printStackTrace();
+        }
+c'est dans le try() que l'on initialise les objets faisant l'objet d'un close
+

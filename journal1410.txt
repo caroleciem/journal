@@ -1,0 +1,86 @@
+classe est est un pgm qui a des données et le code qui les manipule
+
+laclasse est le type d'un objet (par ex String est le type de toto)
+l'objet est une instance d'une classe(toto est un objet de String)
+
+en java, tout le code est sous forme de classe
+
+package: orga hierarchique des classes
+au lieu de mettre le nom entier, on peut faire des imports
+
+interface (au sens large) : ce que l'on voit (quoi)
+implémentation : comment, ce qui est caché
+
+signature des méthodes: son nom, ses attributs en entrées, les retours
+
+minimalisation complexité: on minimise ce qui est visible car cela n'a pas
+de dépendance sur ce qui est caché
+
+public: visible partout donc si on veut le changer, cela posera pb à tout 
+ceux qui auront utilisé le code
+
+c'est plus facile d'élargir une interface (la passer de private à public). 
+En conclusion, il vaut mieux metter en private
+
+print: methode d'instancecar sur des objets
+static concerne classe (n'est pas créé en cours d'exec)
+
+attributs d'une classe: 
+classe Integer correpond auxobjets avecle type int primitif
+pour les collections, on ne peut avoir de ArrayList de int, il faut des Integer
+Double pour double et Float pour float
+Integer.MAX_VALUE est une constante, pas lié à une instance particulière
+on accède à un attribut d'une classe (idem pour System.out)
+
+attributs constants: 
+public static final int NB_OF_ENTRIES = 3
+
+pour construire une instance:
+TestItem ti =new TestItem();
+
+CONSTRUCTEUR:
+on a uneclasse et son constructeur a le même nom
+public class TestItem{
+	public TestItem(String q,String a,int p){
+	
+		question = q;
+		answer=a;
+		points=p
+	}	
+}
+dansle constructeur, on initialise les attributs de l'instance
+
+this: referencesu l'objet courant
+dans le constructeur, on pourrait donc mettre:
+	public TestItem(String question, String answer,int points){
+		this.question = question;
+		this.answer=answer;
+		this.points=points;
+	}
+
+accesseurs:
+
+généralement, on a pas accès auxattributsd'une classe maison peut en avoir besoin
+
+public String getQuestion(){
+	return question
+}
+pour l'appeler, on aura item.getQuestion où item est l'objet créé
+ce qui est retourné est l'attribut
+public void setQuestion (String question){
+	this.question = question;
+}
+on ne peut pas mettre static au get et set car ce qui est lié à une instance 
+n'est pas statique
+
+Methodes: (non qualifiée par static)
+le code peut être dans la classe TestItem pour valider la réponse
+
+pour chercher les valeurs dans collections, identiques (c'est pour la référence)
+pour egal, c'est les valeurs que l'on teste
+pour afficher un objet, on le transforme en chaine de caractères,
+ il faut utiliser toString. Il faut donc une méthode toString dans la classe pour afficher correctement dans le main
+
+classe immutable si tous les attributs sont constants
+   
+  
